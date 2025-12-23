@@ -1,9 +1,9 @@
 import React from 'react'
 import './LatestVideo.css'
-import YoutubeCard from '../YoutubeCard'
-import YoutubeBtn from '../YoutubeBtn'
-import YoutubeVideo from '../YoutubeVideo'
-import Heading from '../Heading'
+import YoutubeCard from '../features/youtube/YoutubeCard'
+import YoutubeBtn from '../features/youtube/YoutubeBtn'
+import YoutubeVideo from '../features/youtube/YoutubeVideo'
+import Heading from '../common/Heading'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faYoutube } from '@fortawesome/free-brands-svg-icons'
 import {
@@ -47,10 +47,7 @@ export default function LatestVideo() {
             </div>
 
             <div className="latest-video-yt-btn-container">
-                <a href=""> 
-                    <FontAwesomeIcon className="fa-youtube" icon={faYoutube} />
-                    Subscribe Now 🚀
-                </a>
+                <YoutubeBtn text="Join Our Art Community" />
             </div>
 
 

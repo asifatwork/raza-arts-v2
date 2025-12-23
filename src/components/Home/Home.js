@@ -3,8 +3,9 @@ import './Home.css';
 import Intro from './Intro';
 import Painting from './Painting';
 import Services from './Services';
-import Payment from './Payment';
+import WhatsApp from './WhatsApp';
 import LatestVideo from './LatestVideo';
+import Footer from '../layout/Footer/Footer';
 
 export default function Home() {
     return (
@@ -12,8 +13,9 @@ export default function Home() {
             <Intro/>
             <Painting/>
             <Services/>
-            <Payment/>
+            {/* <WhatsApp/> */}
             <LatestVideo/>
+            <Footer/>
         </div>
     )
 }

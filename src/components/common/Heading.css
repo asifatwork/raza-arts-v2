@@ -1,0 +1,24 @@
+.heading-container {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 3rem;
+    /* More breathing room */
+}
+
+.heading-title {
+    color: var(--text-primary);
+    font-size: 3.5rem;
+    /* Larger */
+    font-weight: 400;
+    /* Regular weight, not bold */
+    font-family: var(--font-heading);
+    letter-spacing: -1px;
+    /* Tighter letter spacing for modern editorial look */
+    position: relative;
+    padding-bottom: 0;
+}
+
+/* Remove the chunky underline, or make it a tiny dot if needed. removing for minimalism */
+.heading-title::after {
+    display: none;
+}

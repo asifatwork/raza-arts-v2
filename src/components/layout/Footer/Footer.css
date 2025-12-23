@@ -1,0 +1,71 @@
+.footer-container {
+    background-color: var(--bg-color);
+    /* White */
+    padding: 100px 5% 40px;
+    color: var(--text-primary);
+    border-top: 1px solid rgba(0, 0, 0, 0.05);
+    /* Very light grey line */
+}
+
+/* ... content ... */
+
+.footer-nav ul,
+.social-links {
+    /* ... */
+}
+
+.footer-links a,
+.social-links a {
+    color: var(--text-primary);
+    /* Black */
+    /* ... */
+}
+
+.footer-links a:hover,
+.social-links a:hover {
+    color: var(--text-secondary);
+    /* Grey on hover */
+}
+
+/* --- Massive Brand Anchor --- */
+.footer-brand-anchor h1 {
+    font-family: var(--font-primary);
+    /* Montserrat */
+    font-size: 13vw;
+    line-height: 0.8;
+    font-weight: 300;
+    /* Thin */
+    color: var(--text-primary);
+    /* Black */
+    opacity: 0.05;
+    /* Extremely subtle watermark look, or full black? Weber is stark. Let's go full black but thin. */
+    opacity: 1;
+    text-align: center;
+    letter-spacing: -0.05em;
+    margin: 0;
+}
+
+/* --- Bottom Bar --- */
+.footer-bottom-bar {
+    border-top: 1px solid rgba(0, 0, 0, 0.05);
+    color: var(--text-secondary);
+}
+
+/* Responsive */
+@media screen and (max-width: 768px) {
+    .footer-top-row {
+        flex-direction: column;
+        gap: 40px;
+    }
+
+    .footer-nav ul,
+    .social-links {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .footer-brand-anchor h1 {
+        font-size: 18vw;
+        /* Even bigger relative on mobile */
+    }
+}

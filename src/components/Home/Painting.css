@@ -1,16 +1,86 @@
-.sub-heading{
-    color: white;
-    display: flex;
-    justify-content: center;
-    margin-top: 8px;
-    font-size: 20px;
+.weber-gallery-container {
+    padding: 150px 5%;
+    background-color: var(--bg-color);
+    /* Clean White */
 }
 
-.images{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    margin-top: 20px;
-    margin-bottom: 20px;
+.weber-header {
+    text-align: center;
+    margin-bottom: 100px;
 }
 
+.weber-title {
+    font-size: 3rem;
+    color: var(--text-primary);
+    font-weight: 300;
+    letter-spacing: 0.25em;
+    text-transform: uppercase;
+    margin-bottom: 30px;
+}
+
+.weber-separator {
+    width: 60px;
+    height: 1px;
+    background-color: var(--text-primary);
+    margin: 0 auto;
+}
+
+.weber-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 60px;
+    /* Wide luxurious gap */
+    max-width: 1600px;
+    margin: 0 auto;
+}
+
+.weber-item {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+/* Override common Image styles for this specific look if needed, 
+   but Image.css was already minimalist. ensuring full width. */
+.weber-item .image {
+    width: 100%;
+    aspect-ratio: 3/4;
+    /* Enforce uniform vertical aspect ratio like portraits */
+    object-fit: cover;
+    margin-bottom: 0;
+    filter: none;
+    /* Reference has full color or B&W depending on art, let's keep it raw */
+    transition: filter 0.5s ease;
+}
+
+.weber-item:hover .image {
+    filter: contrast(1.1);
+    /* Subtle pop */
+}
+
+.artwork-caption {
+    font-family: var(--font-primary);
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
+    color: var(--text-secondary);
+    text-align: center;
+    opacity: 0.7;
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+    .weber-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 600px) {
+    .weber-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .weber-title {
+        font-size: 2rem;
+    }
+}

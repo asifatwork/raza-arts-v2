@@ -1,43 +1,114 @@
-.services-container{
-    padding-top: 80px;
-    padding-bottom: 80px;
-}
-.draw-my-portrait-btn-container{
-    display: flex;
-    justify-content: center;
-    margin-top: 20px;
+.services-container {
+    padding: 120px 5%;
+    background-color: var(--bg-color);
+    position: relative;
+    max-width: 1400px;
+    margin: 0 auto;
 }
 
-.price-card-container{
+.services-header {
+    text-align: center;
+    margin-bottom: 80px;
+}
+
+.service-list {
+    display: flex;
+    flex-direction: column;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.service-item {
     display: flex;
     justify-content: space-between;
-    margin-top: 50px;
-    margin-bottom: 50px;
+    align-items: center;
+    /* Center vertically specifically */
+    padding: 60px 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    cursor: pointer;
+    transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
 }
 
-.price-card{
-    background-color: #2C3E50;
-    border-radius: 10px;
-    text-align: center;
-    width: 300px;
-}
-.price-card > img {
-    width: 300px;
-    border-top-left-radius: 10px;
-    border-top-right-radius: 10px;
-}
-.price-card-text-container{
-    padding: 15px;
+.service-item:hover {
+    padding-left: 20px;
+    padding-right: 20px;
+    background-color: rgba(255, 255, 255, 0.02);
 }
 
-.price-card-text-container > p{
-    line-height: 30px;
-    color: white;
+.service-info {
+    max-width: 60%;
 }
 
-.category-text{
-    font-size: 15px;
-    font-weight: bold;
-    color: #FFEB3C;
+.service-title {
+    font-size: 3rem;
+    font-family: var(--font-heading);
+    font-weight: 300;
+    /* Thin and elegant */
+    color: var(--text-primary);
+    margin-bottom: 10px;
+    transition: color 0.3s ease;
 }
 
+.service-desc {
+    font-family: var(--font-body);
+    font-size: 1rem;
+    color: var(--text-secondary);
+    font-weight: 300;
+    line-height: 1.6;
+}
+
+.service-meta {
+    text-align: right;
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+.service-price {
+    font-family: var(--font-body);
+    font-size: 0.9rem;
+    color: var(--accent-gold);
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+.arrow-icon {
+    font-size: 2rem;
+    color: var(--text-secondary);
+    transform: rotate(-45deg);
+    transition: transform 0.4s ease, color 0.3s ease;
+}
+
+.service-item:hover .service-title {
+    color: var(--accent-gold);
+    /* Gold on hover */
+    font-style: italic;
+    /* Editorial flair */
+}
+
+.service-item:hover .arrow-icon {
+    transform: rotate(0deg) translateX(10px);
+    color: var(--text-primary);
+}
+
+/* Responsive */
+@media screen and (max-width: 768px) {
+    .service-item {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 20px;
+        padding: 40px 0;
+    }
+
+    .service-info {
+        max-width: 100%;
+    }
+
+    .service-title {
+        font-size: 2.2rem;
+    }
+
+    .service-meta {
+        width: 100%;
+        justify-content: space-between;
+    }
+}

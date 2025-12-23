@@ -1,32 +1,23 @@
 import React from 'react'
 import './Intro.css'
-import HireMeBtn from '../HireMeBtn'
-import SocialIcons from '../SocialIcons'
 
 export default function Intro() {
     return (
         <div className="intro-container">
+            <div className="hero-image-wrapper">
+                {/* Placeholder for high-res artist-at-work image */}
+                <img src="/images/Intro.jpg" alt="Artist at work" className="hero-bg-image" />
+                <div className="hero-overlay"></div>
+            </div>
 
-            <div className="intro-row">
-            
-                <div className="intro-col-1">
-                    
-                    <div className="intro">
-                        <h5>Hello, I'm</h5>
-                        <h1>Raza Khan</h1>
-                        <h5>Professional and Experience Artist</h5>
-                    </div>
+            <div className="hero-content">
+                <h2 className="hero-subtitle">HYPER-REALISTIC PAINTINGS</h2>
+                <h1 className="hero-title">RAZA ARTS</h1>
+            </div>
 
-                    <SocialIcons/>
-                    <HireMeBtn text="Hire me 👋"/>
-                    
-
-                </div>
-
-                <div className="intro-col-2">
-                    <img className="intro-img" src="images/logo.jpg" alt="" />
-                </div>
-                
+            <div className="scroll-indicator">
+                <span>SCROLL</span>
+                <div className="line"></div>
             </div>
         </div>
     )

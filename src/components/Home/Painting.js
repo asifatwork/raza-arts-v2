@@ -1,22 +1,43 @@
 import React from 'react'
-import Heading from '../Heading'
-import Image from '../Image'
 import './Painting.css'
+import Image from '../common/Image'
 
 export default function Painting() {
     return (
-        <div className="painting-container">
-            <Heading title="Turn your photo into painting !" />
-            <p className="sub-heading">100% Hand-Painted to Perfection by BEST Portrait Artists.</p>
-            <div className="images">
-                <Image url="/images/1.jpg"/>
-                <Image url="/images/2.jpg"/>
-                <Image url="/images/3.jpg"/>
-                <Image url="/images/4.jpg"/>
-                <Image url="/images/5.jpg"/>
-                <Image url="/images/6.jpg"/>
-                <Image url="/images/7.jpg"/>
-                <Image url="/images/8.jpg"/>
+        <div className="weber-gallery-container">
+            <div className="weber-header">
+                <h2 className="weber-title">Selected Works</h2>
+                <div className="weber-separator"></div>
+            </div>
+            
+            <div className="weber-grid">
+                {/* Row 1 */}
+                <div className="weber-item">
+                    <Image url="/images/1.jpg"/>
+                    <span className="artwork-caption">Portrait Study No. 1</span>
+                </div>
+                <div className="weber-item">
+                    <Image url="/images/2.jpg"/>
+                    <span className="artwork-caption">Commissioned Work</span>
+                </div>
+                <div className="weber-item">
+                    <Image url="/images/3.jpg"/>
+                    <span className="artwork-caption">Graphite Series</span>
+                </div>
+
+                {/* Row 2 */}
+                <div className="weber-item">
+                    <Image url="/images/4.jpg"/>
+                    <span className="artwork-caption">Oil on Canvas</span>
+                </div>
+                <div className="weber-item">
+                    <Image url="/images/5.jpg"/>
+                    <span className="artwork-caption">Hyper-Realism</span>
+                </div>
+                <div className="weber-item">
+                    <Image url="/images/6.jpg"/>
+                    <span className="artwork-caption">The Gaze</span>
+                </div>
             </div>
         </div>
     )

@@ -1,0 +1,22 @@
+.hire-me-btn-container {
+    margin-top: 2rem;
+}
+
+.hire-me-btn {
+    text-decoration: none;
+    padding: 12px 30px;
+    background: linear-gradient(135deg, var(--accent-gold), var(--accent-terracotta));
+    border-radius: 50px;
+    color: #ffffff;
+    font-weight: 600;
+    font-size: 1.1rem;
+    font-family: var(--font-body);
+    box-shadow: 0 4px 20px rgba(255, 255, 255, 0.4);
+    transition: all 0.3s ease;
+    display: inline-block;
+}
+
+.hire-me-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 25px rgba(255, 255, 255, 0.6);
+}

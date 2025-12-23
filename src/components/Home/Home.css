@@ -1,4 +1,7 @@
-.home-container{
-    width: 80%;
-    margin: auto;
+.home-container {
+    width: 100%;
+    margin: 0;
+    /* Removed scroll snap for natural, high-end scroll flow */
 }
+
+/* Removed .home-container > div min-height constraint to allow footer and sections to be partial height */

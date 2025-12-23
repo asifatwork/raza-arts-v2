@@ -1,0 +1,107 @@
+.whatsapp-container {
+    background-color: #0b0b0b;
+    /* Deep rich black */
+    padding: 100px 5%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    scroll-snap-align: center;
+}
+
+.whatsapp-content {
+    max-width: 800px;
+    width: 100%;
+}
+
+.whatsapp-title {
+    font-family: var(--font-heading);
+    font-size: 3rem;
+    color: #ffffff;
+    margin-bottom: 20px;
+    letter-spacing: 1px;
+}
+
+.whatsapp-subtitle {
+    font-family: var(--font-body);
+    font-size: 1.1rem;
+    color: #cccccc;
+    margin-bottom: 40px;
+    line-height: 1.6;
+}
+
+.trust-badges {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    margin-bottom: 50px;
+    flex-wrap: wrap;
+}
+
+.trust-badge {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    color: #ffffff;
+}
+
+.trust-icon {
+    font-size: 2rem;
+    color: #25D366;
+    /* WhatsApp Green for subtle trust cue, or maintain white for strict B&W */
+    /* Let's stick to B&W premium with slight green accent for brand recognition if appropriate, 
+       but user asked for trust. White is safest for strict theme, but Green is recognizable for WhatsApp.
+       Let's use White for icons to match theme, maybe green on hover. */
+    color: #ffffff;
+    transition: color 0.3s ease;
+}
+
+.trust-badge:hover .trust-icon {
+    color: #25D366;
+}
+
+.trust-badge span {
+    font-size: 1rem;
+    font-weight: 500;
+    letter-spacing: 0.5px;
+    color: #cccccc;
+}
+
+.whatsapp-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 15px;
+    background-color: #25D366;
+    /* Brand color key for CTA */
+    color: #ffffff;
+    padding: 18px 40px;
+    border-radius: 50px;
+    font-size: 1.2rem;
+    font-weight: 600;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    box-shadow: 0 10px 30px rgba(37, 211, 102, 0.2);
+}
+
+.whatsapp-btn:hover {
+    background-color: #128C7E;
+    transform: translateY(-5px);
+    box-shadow: 0 15px 40px rgba(37, 211, 102, 0.3);
+}
+
+.btn-icon {
+    font-size: 1.5rem;
+}
+
+@media screen and (max-width: 768px) {
+    .whatsapp-title {
+        font-size: 2rem;
+    }
+
+    .trust-badges {
+        gap: 20px;
+    }
+}

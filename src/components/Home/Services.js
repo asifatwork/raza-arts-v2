@@ -1,57 +1,67 @@
-import React from 'react'
-import './Services.css'
-import Heading from '../Heading'
-import HireMeBtn from '../HireMeBtn'
+import React, { useState } from 'react';
+import './Services.css';
+import Heading from '../common/Heading';
+
+const servicesData = [
+    {
+        id: 1,
+        title: "Oil Painting",
+        description: "Museum-quality oil portraits on canvas. Rich textures and timeless depth.",
+        price: "Start from $180",
+        image: "/images/1.jpg"
+    },
+    {
+        id: 2,
+        title: "Charcoal Sketch",
+        description: "Dramatic high-contrast sketches. Bold, expressive, and raw.",
+        price: "Start from $80",
+        image: "/images/2.jpg"
+    },
+    {
+        id: 3,
+        title: "Watercolor",
+        description: "Fluid and vibrant pieces that capture emotion with delicate transparency.",
+        price: "Start from $120",
+        image: "/images/3.jpg"
+    },
+    {
+        id: 4,
+        title: "Pencil Drawing",
+        description: "Hyper-realistic graphite details. Precision meets emotion.",
+        price: "Start from $100",
+        image: "/images/4.jpg"
+    }
+];
 
 export default function Services() {
+    const [hoveredService, setHoveredService] = useState(null);
+
     return (
         <div className="services-container">
-            <Heading title="Our Services" />
-
-            <div className="price-card-container">
-                <div className="price-card">
-                    <img src="/images/2.jpg" alt="" />
-                    <div className="price-card-text-container">
-                        <p className="category-text">Oil Painting on Canvas</p>
-                        <p>A3 size ₹ 4000</p>
-                        <p>A2 size ₹ 7000</p>
-                        <p>A1 size ₹ 12000</p>
-                        <p>Working Days 7-15 </p>
-                    </div>
-                </div>
-
-                <div className="price-card">
-                    <img src="/images/7.jpg" alt="" />
-                    <div className="price-card-text-container">
-                        <p className="category-text">Pencil Drawing Black & white</p>
-                        <p>A3 Size ₹ 2000</p>
-                        <p>A2 size ₹ 3000</p>
-                        <p>A1 size ₹ 4000</p>
-                        <p>Working Days 4-5</p>
-                    </div>
-                </div>
-
-
-                <div className="price-card">
-                    <img src="/images/3.jpg" alt="" />
-                    <div className="price-card-text-container">
-                        <p className="category-text">Colour Pencil Drawing </p>
-                        <p>A3 Size ₹ 2000</p>
-                        <p>A1 size ₹ 4000</p>
-                        <p>A2 size ₹ 3000</p>
-                        <p>Working Days 4-5 </p>
-                    </div>
-                </div>
-
-
-
+            <div className="services-header">
+                <span className="eyebrow">02 — EXPERTISE</span>
+                <Heading title="Our Services" />
             </div>
 
-            <div className="draw-my-portrait-btn-container">
-                <HireMeBtn text="Draw My Portrait 👋"/>
+            <div className="service-list">
+                {servicesData.map((service) => (
+                    <div 
+                        key={service.id} 
+                        className="service-item"
+                        onMouseEnter={() => setHoveredService(service.id)}
+                        onMouseLeave={() => setHoveredService(null)}
+                    >
+                        <div className="service-info">
+                            <h3 className="service-title">{service.title}</h3>
+                            <p className="service-desc">{service.description}</p>
+                        </div>
+                        <div className="service-meta">
+                            <span className="service-price">{service.price}</span>
+                            <span className="arrow-icon">→</span>
+                        </div>
+                    </div>
+                ))}
             </div>
-
-            
         </div>
-    )
+    );
 }

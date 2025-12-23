@@ -1,0 +1,33 @@
+.youtube-card {
+    min-width: 200px;
+    padding: 30px;
+    background-color: var(--bg-secondary);
+    /* Restore background */
+    text-align: center;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 8px;
+    transition: all 0.3s ease;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+    position: relative;
+    overflow: hidden;
+}
+
+.youtube-card:hover {
+    transform: translateY(-10px);
+    border-color: rgba(255, 255, 255, 0.4);
+    box-shadow: 0 15px 40px rgba(255, 255, 255, 0.1);
+    z-index: 2;
+}
+
+.youtube-card>h2 {
+    font-size: 2.5rem;
+    color: var(--primary-color);
+    font-family: var(--font-heading);
+    margin-bottom: 5px;
+}
+
+.youtube-card>p {
+    font-size: 1.1rem;
+    color: var(--text-secondary);
+    font-weight: 500;
+}
